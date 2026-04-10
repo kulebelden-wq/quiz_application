@@ -1,0 +1,108 @@
+QUIZARD APP - THE MASTER EXPLAINER GUIDE
+(Simple enough for a child, smart enough for an expert!)
+
+This guide explains every line of your app. If someone asks you "How did you build this?", you can read these lines and you will sound like a professional developer!
+
+================================================================================
+1. THE STARTING GATE: MainActivity.java
+================================================================================
+
+Code: public class MainActivity extends AppCompatActivity {
+- Simple: We are making the "Front Door" of our app called MainActivity.
+- Help: It gives the app a starting point.
+- Factor: We use 'AppCompatActivity' so the door looks beautiful on old phones and brand new ones.
+
+Code: protected void onCreate(Bundle savedInstanceState) {
+- Simple: This is the "Wake Up" alarm for the app.
+- Help: It tells the app what to do the very second it is opened.
+- Factor: 'savedInstanceState' is like a memory book; it helps the app remember where it was if it was closed by mistake.
+
+Code: super.onCreate(savedInstanceState);
+- Simple: Telling the phone to do its normal "Wake Up" chores first.
+- Help: It makes sure the phone's engine is running before we add our own fun stuff.
+- Factor: This is a rule in Android; you must always respect the phone's basic chores first.
+
+Code: Intent intent = new Intent(MainActivity.this, LandingActivity.class);
+- Simple: Making a "Travel Ticket" to go from this room to the Welcome Room.
+- Help: It moves the user forward.
+- Factor: We call it an 'Intent' because the app "intends" or wants to go somewhere else.
+
+Code: startActivity(intent);
+- Simple: Giving the ticket to the conductor!
+- Help: It actually makes the screen change.
+- Factor: Without this line, the ticket is just a piece of paper; this line makes the magic happen.
+
+Code: finish();
+- Simple: Locking the front door behind us.
+- Help: It prevents the user from going back to a blank screen.
+- Factor: It saves phone battery and memory by closing rooms we don't need anymore.
+
+================================================================================
+2. THE TEACHER'S NOTEBOOK: Question.java
+================================================================================
+
+Code: private String question; ... private int answerIndex;
+- Simple: Creating "Storage Cubbies" for the question, the answers, and the secret correct number.
+- Help: It keeps the information organized so it doesn't get messy.
+- Factor: We use 'private' so other parts of the app don't accidentally change the questions.
+
+Code: public Question(String category, String question, ...) {
+- Simple: A "Packing Machine" that puts all the info into the box at once.
+- Help: It makes it easy to create 20 questions quickly.
+- Factor: This is called a 'Constructor' because it "constructs" or builds the question box.
+
+================================================================================
+3. THE WELCOME ROOM: LandingActivity.java
+================================================================================
+
+Code: setContentView(R.layout.activity_landing);
+- Simple: Picking the "Wallpaper" and "Furniture" for this room.
+- Help: It connects our Java brain to our XML design.
+- Factor: 'R.layout' is like an address book that tells Java where the design files are hidden.
+
+Code: View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_category_select, null);
+- Simple: Taking a flat drawing of a popup and "blowing it up" like a balloon to make it real.
+- Help: It allows us to show the "Math or Tech" selection box.
+- Factor: 'Inflate' is a funny word developers use when they turn a file into a real thing you can touch on the screen.
+
+================================================================================
+4. THE GAME ROOM: QuizActivity.java
+================================================================================
+
+Code: score++;
+- Simple: Adding a gold star (+1) to the scoreboard.
+- Help: It keeps track of how many questions you got right.
+- Factor: Using '++' is a shortcut for "add one." Developers love shortcuts!
+
+Code: highlightButton(selectedOptionIndex, R.color.green_correct);
+- Simple: Splashing green paint on the button you clicked.
+- Help: It shows the user they were right!
+- Factor: We use 'R.color' so we don't have to remember hard numbers for colors; we just use a name like 'green_correct'.
+
+================================================================================
+5. THE ART & COLORS (XML & Drawables)
+================================================================================
+
+Code: <shape android:shape="oval">
+- Simple: Drawing a perfect circle.
+- Help: It makes the score look pretty and round.
+- Factor: We use 'oval' because it is a mathematical name for a circle shape.
+
+Code: <corners android:radius="20dp" />
+- Simple: Sanding down the sharp edges of a button.
+- Help: It makes the buttons look modern and "soft" to touch.
+- Factor: 'Radius' is a math word for how curvy a corner is. Higher numbers = more curve!
+
+================================================================================
+6. THE ENGINE ROOM (Gradle & Manifest)
+================================================================================
+
+Code: compileSdk 34
+- Simple: Telling the app: "Use the newest tools from the year 2024!"
+- Help: It makes sure the app can use the coolest new features.
+- Factor: Using '34' means our app is up-to-date and won't be "old-fashioned."
+
+Code: <action android:name="android.intent.action.MAIN" />
+- Simple: Putting a "START HERE" sign on the app icon.
+- Help: It tells the phone which screen to show first.
+- Factor: Without this, the phone would get confused and wouldn't know how to open the app!

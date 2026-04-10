@@ -1,0 +1,41 @@
+PROJECT REPORT: QUIZARD - INTERACTIVE OFFLINE QUIZ APPLICATION
+
+1. INTRODUCTION
+Quizard is an Android-based educational application designed to provide an engaging and informative quiz experience. Unlike standard quiz apps, Quizard emphasizes learning through scenarios and detailed explanations, all while operating entirely offline.
+
+2. OBJECTIVES ACHIEVED
+- Developed a multi-category quiz system (Technology, Mathematics, Physics, Riddles, IQ).
+- Implemented a "Scenario-Based" question engine to test practical application of knowledge.
+- Created an educational feedback system with expandable explanations for every question.
+- Engineered a "Custom Quiz Studio" for user-generated content.
+- Integrated a QR-code-based offline sharing mechanism for peer-to-peer collaboration.
+
+3. TECHNICAL SPECIFICATIONS
+- Programming Language: Java
+- UI Framework: XML with Material Design 3 components.
+- Data Storage: SharedPreferences (for persistent offline storage) and JSON (for data serialization).
+- SDK Versions: Min SDK 24 (Android 7.0), Target/Compile SDK 36 (Android 15+).
+- Libraries: ZXing (Zebra Crossing) for QR code generation and scanning.
+
+4. CORE FEATURES & IMPLEMENTATION
+A. Learning Interface:
+   - Uses a clean, card-based UI.
+   - Includes a ProgressBar to track user journey.
+   - Dynamic UI elements (like the explanation dropdown) use property animations for a professional feel.
+
+B. Offline Sharing:
+   - Utilizes JSON objects to package quiz data.
+   - Converts JSON data into high-density QR codes for scanning without internet.
+
+C. Category Management:
+   - A centralized "CategoryActivity" acts as a dashboard.
+   - Uses Intent-based communication to pass category data between screens.
+
+5. CHALLENGES AND SOLUTIONS
+- Challenge: Storing complex question structures offline without a full database.
+  Solution: Used JSONArray and JSONObject stored as strings in SharedPreferences.
+- Challenge: Ensuring the app looks professional on all screen sizes.
+  Solution: Implemented a responsive full-page Category layout with MaterialCardView and elevation.
+
+6. CONCLUSION
+Quizard successfully demonstrates that offline mobile applications can provide high-value educational experiences. The integration of social features like QR sharing and pedagogical tools like scenario-based questions makes it a unique asset in the mobile learning market.

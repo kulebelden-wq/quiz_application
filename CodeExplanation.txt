@@ -1,0 +1,74 @@
+# QUIZ APP - COMPREHENSIVE CODE EXPLANATION
+
+This document explains the logic behind CreateQuizActivity.java and how all the pages (Activities) in your application are connected.
+
+---
+
+## 1. CreateQuizActivity.java - Line-by-Line Explanation
+
+This activity allows users to create their own questions, save them locally, generate a QR code for sharing, and scan others' QR codes.
+
+### Variables & UI Components
+- **EditText fields (etScenario, etQuestion, etc.):** These capture the user's input for the quiz content.
+- **Buttons (btnSave, btnShare, btnScan):** These trigger the main actions.
+- **ivQRCode:** An ImageView used to display the generated QR code.
+
+### The Code Logic
+- **onCreate():**
+    - `setContentView(R.layout.activity_create_quiz)`: Links the Java file to its XML design.
+    - `findViewById()`: Connects the Java variables to the actual UI elements defined in XML.
+    - `btnSave.setOnClickListener(...)`: Listens for a click to save the question to the phone's memory.
+    - `btnScan.setOnClickListener(...)`: Initializes the QR scanner using the ZXing library.
+
+- **saveQuestion():**
+    - It converts the text from EditTexts into a **JSONObject**.
+    - It uses **SharedPreferences** (a simple local database) to save this JSON string permanently on the device.
+
+- **generateQRCode():**
+    - It takes the JSON data of your question and uses the `BarcodeEncoder` library to turn that text into a visual **QR Code image** displayed in `ivQRCode`.
+
+- **importQuestionFromQR():**
+    - When you scan a code, this function takes the raw data (the text inside the QR), converts it back to a JSONObject, and adds it to your local list of questions in SharedPreferences.
+
+---
+
+## 2. Page Connectivity (How the App Flows)
+
+The app moves between screens using **Intents** in Java and is structured using **Layouts** in XML.
+
+### Flow 1: Startup & Authentication
+1. **AndroidManifest.xml:** Defines **LandingActivity** as the "Launcher," meaning it's the first page that opens.
+2. **LandingActivity (Java):** When "Start Playing" is clicked, it uses an `Intent` to move to **CategoryActivity**.
+   - `Intent intent = new Intent(this, CategoryActivity.class); startActivity(intent);`
+
+### Flow 2: Category Selection & Quiz
+1. **CategoryActivity (Java):** This is your main dashboard.
+   - Each card (Tech, Math, etc.) has a listener. When clicked, it passes a "Label" (String) to the next page.
+   - `intent.putExtra("CATEGORY", "Technology");`
+2. **QuizActivity (Java):**
+   - **Load:** It receives the "CATEGORY" string and filters the list of questions to show only those matching that subject.
+   - **UI:** It uses `activity_quiz.xml` to show the question, scenario, and 4 buttons.
+   - **Completion:** Once the last question is answered, it moves to **ResultActivity**, passing the final score.
+
+### Flow 3: Results & Retry
+1. **ResultActivity (Java):** Displays the score using `activity_result.xml`.
+2. **Connection:** Usually has a "Home" button that sends the user back to **LandingActivity** or **CategoryActivity**.
+
+### Flow 4: Custom Quiz Creation
+1. **CategoryActivity (Java):** Has a button "+ Create / Share Quiz" that opens **CreateQuizActivity**.
+2. **CreateQuizActivity (Java):** After a user creates a quiz, it is saved in the phone's shared memory.
+3. **QuizActivity (Java):** When the user selects the "Custom" category in CategoryActivity, the QuizActivity reads the data saved by CreateQuizActivity from SharedPreferences and displays it as a playable quiz.
+
+---
+
+## 3. Connection Summary Table
+
+| From Activity | To Activity | Trigger Action | Key Java Code |
+|---------------|-------------|----------------|---------------|
+| Landing | Category | Click "Start Playing" | startActivity(new Intent(...)) |
+| Category | Quiz | Click a Category Card | intent.putExtra("CATEGORY", ...) |
+| Category | CreateQuiz | Click "+ Create/Share" | startActivity(new Intent(...)) |
+| Quiz | Result | Last question answered | intent.putExtra("SCORE", score) |
+| CreateQuiz | Quiz | Automatic (via SharedPrefs)| Saved as "Custom" category |
+
+This architecture ensures that your data (like custom questions) is shared between activities even though they are separate pages.

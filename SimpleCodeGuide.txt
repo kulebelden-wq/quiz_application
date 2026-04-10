@@ -1,0 +1,87 @@
+QUIZARD APP - THE SIMPLE "HOW IT WORKS" GUIDE
+(Explained like you're in primary school!)
+
+Hello! This guide explains every little bit of code in your Quizard app. Think of the app like a toy house that we built together.
+
+---
+
+1. THE "BRAIN" OF THE APP (Java Files)
+--------------------------------------
+
+A. Question.java (The Question Box)
+Imagine a small box. Inside, we put:
+- The question (e.g., "What is 1+1?")
+- Four cards with answers (e.g., "1", "2", "3", "4")
+- A secret note saying which one is correct (e.g., "Answer #2 is right!")
+- A label saying if it's "Math" or "Tech".
+This file tells the computer how to make these boxes.
+
+B. MainActivity.java (The Secret Door)
+When you first touch the app icon, it opens this "Secret Door."
+- It has one job: "Run as fast as you can to the Welcome Screen (LandingActivity)!"
+- It doesn't stay open; it just pushes you through to the fun part.
+
+C. LandingActivity.java (The Welcome Mat)
+This is the big "Quizard" screen with your Brain Logo.
+- It waits for you to click "Start playing."
+- When you click it, it shows a "Selection Box" (Dialog).
+- It asks: "Do you want Math or Tech?"
+- Once you pick, it grabs your choice and says: "Go to the Quiz Room!"
+
+D. QuizActivity.java (The Teacher)
+This is the smartest part of the app.
+- It holds all 20 questions in its memory.
+- It checks: "Did the user pick Math?" If yes, it hides the Tech questions.
+- It shows one question at a time.
+- If you click a button, it turns Orange (to show you picked it).
+- If you click "Check," it looks at its secret note.
+- If you are right, it turns Green (Happy!). If wrong, it turns Red (Oops!).
+- It adds +1 to your score every time you get it right.
+
+E. ResultActivity.java (The Report Card)
+After the 10th question, you come here.
+- It takes your score and makes it a big percentage (like 100%!).
+- It draws a big green circle around your score.
+- It says "Passed Again!" to make you feel good.
+- It has two buttons: "Go Back Home" or "Try Again."
+
+---
+
+2. THE "LOOKS" OF THE APP (XML Layout Files)
+--------------------------------------------
+
+A. activity_landing.xml (The Poster)
+This is like drawing a poster.
+- We painted the background Navy Blue.
+- We put the "Quizard" title at the top in big white letters.
+- We pasted your "Brain Logo" in the middle.
+- We put the Cyan button at the bottom.
+
+B. activity_quiz.xml (The Game Board)
+This layout has:
+- A purple bar at the top (The Header).
+- A blue bar that grows (The Progress Bar).
+- A floating dark card where the question sits.
+- Four buttons for you to tap.
+
+C. dialog_category_select.xml (The Popup)
+This is the small window that pops up. It has your logo and two big buttons (Purple and Orange) so you can pick your favorite subject.
+
+---
+
+3. THE "CRAYON BOX" (Resources)
+-------------------------------
+
+A. colors.xml
+This is our crayon box! Instead of saying "Blue," we give the computer a secret code (like #1A1B4B) so it always uses the exact same pretty Navy Blue.
+
+B. drawable/ (The Shapes)
+- quizard_btn_bg.xml: This tells the computer to cut the button corners so they are nice and round, not sharp.
+- circle_blob.xml: This makes those soft circles in the background that look like bubbles.
+
+---
+
+4. THE "MAP" (AndroidManifest.xml)
+This is the map for the whole phone. It tells the phone: "Hey! This app has a Welcome Screen, a Quiz Room, and a Result Page. Please let the user visit all of them!"
+
+AND THAT'S IT! You built a real, professional app using these simple steps.

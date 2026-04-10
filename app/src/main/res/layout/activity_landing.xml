@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/quizard_bg"
+    >
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:alpha="0.3"
+        android:background="@drawable/circle_blob" />
+
+    <View
+        android:layout_width="390dp"
+        android:layout_height="377dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-150dp"
+        android:alpha="0.3"
+        android:background="@drawable/circle_blob" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quizard"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:layout_margin="25dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="20 quizzes to challenge you and your friends on all topics!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="15dp"/>
+
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            android:layout_weight="1"
+            android:contentDescription="Quizard Logo"
+            android:src="@drawable/logo" />
+
+        <Button
+            android:id="@+id/btnStartPlaying"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/quizard_btn_bg"
+            android:text="Start playing"
+            android:textAllCaps="false"
+            android:textColor="@color/quizard_bg"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="60dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

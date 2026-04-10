@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create &amp; Share Quiz"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etScenario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Scenario (Optional)"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Question"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText android:id="@+id/etOp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option 1"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <EditText android:id="@+id/etOp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option 2"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <EditText android:id="@+id/etOp3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option 3"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <EditText android:id="@+id/etOp4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option 4"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/etExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Explanation (Why is it correct?)"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:background="@drawable/rounded_card_bg"
+            android:padding="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct Index (0-3):"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etCorrectIndex"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_card_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Save Locally"
+            android:backgroundTint="@color/orange_primary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnShareQR"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Share as QR"
+                android:backgroundTint="#2196F3"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"/>
+            <Button
+                android:id="@+id/btnScanQR"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Scan QR"
+                android:backgroundTint="#9C27B0"
+                android:textColor="@color/white"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivQRCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>
