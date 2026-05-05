@@ -53,13 +53,7 @@
         android:layout_marginHorizontal="20dp"
         android:progress="10"
         android:progressTint="@color/orange_primary" />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/logo"
-        android:layout_marginTop="50dp"
-        android:alpha="0.1"
-        />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -83,7 +77,7 @@
                 android:background="@drawable/rounded_card_bg"
                 android:padding="15dp"
                 android:text="Scenario text........."
-                android:textColor="#BBBBBB"
+                android:textColor="#FFFFFF"
                 android:textSize="14sp"/>
 
             <LinearLayout

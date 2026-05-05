@@ -48,7 +48,7 @@ public class CreateQuizActivity extends AppCompatActivity {
 
         btnScan.setOnClickListener(v -> {
             ScanOptions options = new ScanOptions();
-            options.setPrompt("Scan a Quiz QR Code");
+            options.setPrompt("Scan Quizard QR Code");
             options.setBeepEnabled(true);
             options.setOrientationLocked(true);
             options.setCaptureActivity(CustomScannerActivity.class);
@@ -56,6 +56,8 @@ public class CreateQuizActivity extends AppCompatActivity {
         });
     }
 
+
+    // code scanner launcher(robot)
     private final androidx.activity.result.ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(),
             result -> {
                 if(result.getContents() != null) {
@@ -65,7 +67,7 @@ public class CreateQuizActivity extends AppCompatActivity {
 
     private void saveQuestion() {
         Question newQ = getQuestionFromFields();
-        if (newQ == null) {
+            if (newQ == null) {
             Toast.makeText(this, "Please fill in all required fields and valid correct index (0-3)", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -160,8 +162,14 @@ public class CreateQuizActivity extends AppCompatActivity {
     }
 
     private void clearFields() {
-        etScenario.setText(""); etQuestion.setText(""); etOp1.setText("");
-        etOp2.setText(""); etOp3.setText(""); etOp4.setText("");
-        etCorrectIndex.setText(""); etExplanation.setText(""); ivQRCode.setVisibility(View.GONE);
+        etScenario.setText("");
+        etQuestion.setText("");
+        etOp1.setText("");
+        etOp2.setText("");
+        etOp3.setText("");
+        etOp4.setText("");
+        etCorrectIndex.setText("");
+        etExplanation.setText("");
+        ivQRCode.setVisibility(View.GONE);
     }
 }

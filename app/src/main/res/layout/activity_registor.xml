@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,18 +47,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:text="Quizard"
+            android:text="Create your Account"
             android:textColor="@color/white"
-            android:textSize="42sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <!-- Responsive replacement for the fixed width View -->
         <View
             android:layout_width="match_parent"
             android:layout_height="66dp"
-            android:layout_marginHorizontal="15dp"
+            android:layout_marginHorizontal="5dp"
             android:background="@drawable/button_bg"
             android:backgroundTint="#40FFFFFF" />
 
@@ -80,91 +81,103 @@
                     android:layout_marginTop="16dp"
                     android:text="User Name"
                     android:textColor="#000"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/Name"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/edit_text"
                     android:hint="Enter User Name"
                     android:inputType="textPersonName"
-                    android:paddingStart="24dp"
+                    android:paddingStart="14dp"
+                    android:textSize="13sp"
                     android:paddingEnd="24dp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textColorHint="#908D8D"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="18dp"
                     android:text="Email"
                     android:textColor="#000"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/etemal"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/edit_text"
                     android:hint="Enter your Email"
                     android:inputType="textEmailAddress"
+                    android:textSize="13sp"
                     android:paddingStart="14dp"
                     android:paddingEnd="14dp"
-                    android:textColor="#000" />
+                    android:textColor="#000"
+                    android:textColorHint="#908D8D"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="18dp"
                     android:text="Password"
                     android:textColor="#000"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
 
                 <EditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/edit_text"
                     android:hint="Enter Password"
                     android:inputType="textPassword"
                     android:paddingStart="14dp"
+                    android:textSize="13sp"
                     android:paddingEnd="14dp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textColorHint="#908D8D"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="18dp"
                     android:text="Confirm password"
                     android:textColor="#000"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/confirm_pass"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/edit_text"
                     android:hint="Confirm your password"
                     android:inputType="textPassword"
                     android:paddingStart="14dp"
+                    android:textSize="13sp"
                     android:paddingEnd="14dp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textColorHint="#908D8D"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/button_gradient"
                 android:clickable="true"
@@ -173,7 +186,7 @@
                 android:text="Register"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView

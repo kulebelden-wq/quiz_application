@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, LandingActivity.class));
+                    startActivity(new Intent(LoginActivity.this, CategoryActivity.class));
                     finish();
                 }
             }

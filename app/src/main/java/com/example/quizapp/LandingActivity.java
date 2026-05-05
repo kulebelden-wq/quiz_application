@@ -18,7 +18,7 @@ public class LandingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Open the new full-page Category Activity
-                Intent intent = new Intent(LandingActivity.this, CategoryActivity.class);
+                Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

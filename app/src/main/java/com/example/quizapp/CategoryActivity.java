@@ -23,10 +23,10 @@ public class CategoryActivity extends AppCompatActivity {
         Button btnCreate = findViewById(R.id.btnGoToCreate);
 
         btnTech.setOnClickListener(v -> startQuiz("Technology"));
-        btnMath.setOnClickListener(v -> startQuiz("Math"));
+        btnMath.setOnClickListener(v -> startQuiz("Mathematics"));
         btnPhysics.setOnClickListener(v -> startQuiz("Physics"));
-        btnRiddles.setOnClickListener(v -> startQuiz("Classic Riddles"));
-        btnIQ.setOnClickListener(v -> startQuiz("IQ & Logic"));
+        btnRiddles.setOnClickListener(v -> startQuiz("Riddles"));
+        btnIQ.setOnClickListener(v -> startQuiz("IQ Test"));
         btnCustom.setOnClickListener(v -> startQuiz("Custom"));
         
         btnCreate.setOnClickListener(v -> {

@@ -9,8 +9,8 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-100dp"
-        android:layout_marginEnd="-100dp"
+        android:layout_marginTop="-99dp"
+        android:layout_marginEnd="-99dp"
         android:alpha="0.3"
         android:background="@drawable/circle_blob" />
 
@@ -26,25 +26,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quizard"
-            android:textColor="@color/white"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            android:layout_margin="25dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Quizard"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="60sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_margin="25dp"/>-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_margin="25dp"
+            android:src="@drawable/name" />
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="20 quizzes to challenge you and your friends on all topics!"
+            android:text="20 quizzes to challenge you and your friends in all Subjects!"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_margin="15dp"/>
+            android:textSize="15sp"
+            android:layout_marginTop="-21dp"
+            />
 
 
         <ImageView

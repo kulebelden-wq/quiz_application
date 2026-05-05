@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="289dp"
-            android:background="@drawable/topper"
+            android:background="@drawable/toper"
             android:orientation="horizontal">
 
             <TextView
@@ -24,7 +24,7 @@
                 android:layout_marginTop="39dp"
                 android:layout_weight="1"
                 android:text="Registor Now"
-                android:textColor="#000"
+                android:textColor="#E0D3D3"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -35,7 +35,8 @@
                 android:layout_marginStart="6sp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/grad_button"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="#40FFFFFF"
                 android:clickable="true"
                 android:focusable="true"
                 android:paddingHorizontal="12dp"
@@ -47,15 +48,15 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="WELCOME BACK!"
-            android:textColor="#000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="WELCOME BACK!"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,20 +70,23 @@
                 android:layout_marginTop="16dp"
                 android:text="User Name"
                 android:textColor="#000"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="6dp"
                 android:background="@drawable/edit_text"
-                android:hint="ENTER User Name"
+                android:hint="Enter User Name"
                 android:inputType="textEmailAddress"
+                android:textSize="13sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:textColor="#000"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp" />
+                android:textColorHint="#908D8D"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,20 +94,23 @@
                 android:layout_marginTop="16dp"
                 android:text="Password"
                 android:textColor="#000"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="6dp"
                 android:background="@drawable/edit_text"
-                android:hint="ENTER Password"
+                android:hint="Enter Password"
                 android:inputType="textPassword"
-                android:textColor="#000"
                 android:paddingStart="16dp"
-                android:paddingEnd="16dp" />
+                android:textSize="13sp"
+                android:paddingEnd="16dp"
+                android:textColor="#000"
+                android:textColorHint="#908D8D"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -123,7 +130,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
-            android:text="Forgot_password"
+            android:text="Forgot password"
             android:textColor="#1e1e2c" />
 
     </LinearLayout>
